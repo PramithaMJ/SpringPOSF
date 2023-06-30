@@ -1,5 +1,6 @@
 package com.springbootacademy.springbatch10pos.controller;
 
+import com.springbootacademy.springbatch10pos.dto.CustomerDTO;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -11,7 +12,8 @@ import org.springframework.web.bind.annotation.RestController;
 public class CustomerController {
 
     @PostMapping
-    public String saveCustomer() {
+    public String saveCustomer(CustomerDTO customerDTO) {
+        System.out.println("customer "+ customerDTO);
         return "saved";
     }
 }
