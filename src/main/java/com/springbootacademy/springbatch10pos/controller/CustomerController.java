@@ -1,7 +1,9 @@
 package com.springbootacademy.springbatch10pos.controller;
 
 import com.springbootacademy.springbatch10pos.dto.CustomerDTO;
+import com.springbootacademy.springbatch10pos.service.CustomerService;
 import com.springbootacademy.springbatch10pos.service.impl.CustomerServiceIMPL;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -11,11 +13,12 @@ import org.springframework.web.bind.annotation.*;
 @CrossOrigin // get request of all localhost
 public class CustomerController {
 
-    CustomerServiceIMPL customerService = new CustomerServiceIMPL();//create object
+    @Autowired
+    private CustomerServiceIMPL customerServiceIMPL;
     @PostMapping("/save")
     public String saveCustomer(@RequestBody CustomerDTO customerDTO) {
 
-        customerService.saveCustomer(customerDTO); // call one class to another class method using object
+        customerServiceIMPL.saveCustomer(customerDTO); // call one class to another class method using object
 
        // System.out.println("customer "+ customerDTO);
         return "saved";
