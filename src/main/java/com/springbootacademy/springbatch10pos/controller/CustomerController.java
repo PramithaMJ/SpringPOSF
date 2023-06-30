@@ -1,7 +1,7 @@
 package com.springbootacademy.springbatch10pos.controller;
 
 import com.springbootacademy.springbatch10pos.dto.CustomerDTO;
-import com.springbootacademy.springbatch10pos.service.CustomerServiceIMPL;
+import com.springbootacademy.springbatch10pos.service.impl.CustomerServiceIMPL;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
