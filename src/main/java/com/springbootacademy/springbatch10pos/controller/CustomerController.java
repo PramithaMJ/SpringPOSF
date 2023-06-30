@@ -1,8 +1,7 @@
 package com.springbootacademy.springbatch10pos.controller;
 
 import com.springbootacademy.springbatch10pos.dto.CustomerDTO;
-import com.springbootacademy.springbatch10pos.service.CustomerService;
-import org.springframework.stereotype.Controller;
+import com.springbootacademy.springbatch10pos.service.CustomerServiceIMPL;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -12,7 +11,7 @@ import org.springframework.web.bind.annotation.*;
 @CrossOrigin // get request of all localhost
 public class CustomerController {
 
-    CustomerService customerService = new CustomerService();//create object
+    CustomerServiceIMPL customerService = new CustomerServiceIMPL();//create object
     @PostMapping("/save")
     public String saveCustomer(@RequestBody CustomerDTO customerDTO) {
 
