@@ -9,4 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 @CrossOrigin // get request of all localhost
 public class CustomerController {
 
+    public String saveCustomer() {
+        return "saved";
+    }
 }
