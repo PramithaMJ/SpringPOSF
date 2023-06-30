@@ -14,11 +14,11 @@ import org.springframework.web.bind.annotation.*;
 public class CustomerController {
 
     @Autowired
-    private CustomerServiceIMPL customerServiceIMPL;
+    private CustomerService customerService;
     @PostMapping("/save")
     public String saveCustomer(@RequestBody CustomerDTO customerDTO) {
 
-        customerServiceIMPL.saveCustomer(customerDTO); // call one class to another class method using object
+        customerService.saveCustomer(customerDTO); // call one class to another class method using object
 
        // System.out.println("customer "+ customerDTO);
         return "saved";
