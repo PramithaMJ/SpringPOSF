@@ -12,10 +12,10 @@ import org.springframework.web.bind.annotation.*;
 @CrossOrigin // get request of all localhost
 public class CustomerController {
 
+    CustomerService customerService = new CustomerService();//create object
     @PostMapping("/save")
     public String saveCustomer(@RequestBody CustomerDTO customerDTO) {
 
-        CustomerService customerService = new CustomerService();
         customerService.saveCustomer(customerDTO); // call one class to another class method using object
 
        // System.out.println("customer "+ customerDTO);
