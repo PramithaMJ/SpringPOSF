@@ -1,6 +1,7 @@
 package com.springbootacademy.springbatch10pos.controller;
 
 import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -9,6 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 @CrossOrigin // get request of all localhost
 public class CustomerController {
 
+    @PostMapping
     public String saveCustomer() {
         return "saved";
     }
