@@ -9,6 +9,7 @@ public class CustomerServiceIMPL implements CustomerService {
 
     @Override
     public String saveCustomer(CustomerDTO customerDTO) {
+        System.out.println("service customer"+customerDTO);
         return null;
     }
 }
