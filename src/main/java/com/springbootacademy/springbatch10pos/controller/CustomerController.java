@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 @CrossOrigin // get request of all localhost
 public class CustomerController {
 
-    @PostMapping
+    @PostMapping("/save")
     public String saveCustomer(CustomerDTO customerDTO) {
         System.out.println("customer "+ customerDTO);
         return "saved";
