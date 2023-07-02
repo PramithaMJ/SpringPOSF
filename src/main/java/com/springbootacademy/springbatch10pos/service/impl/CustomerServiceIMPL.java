@@ -13,7 +13,6 @@ public class CustomerServiceIMPL implements CustomerService {
     @Autowired
     private CustomerRepo customerRepo;
 
-
     @Override
     public String saveCustomer(CustomerDTO customerDTO) {
         Customer customer = new Customer(
@@ -24,7 +23,7 @@ public class CustomerServiceIMPL implements CustomerService {
                 customerDTO.getNic(),
                 customerDTO.isActiveStatus()
         );
-        customerRepo.save(customer);
+        customerRepo.save(customer);//Save object to database
         return "saved";
     }
 }
