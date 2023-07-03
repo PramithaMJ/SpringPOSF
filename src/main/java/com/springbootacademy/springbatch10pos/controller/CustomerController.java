@@ -28,7 +28,7 @@ public class CustomerController {
 
     @PutMapping("/update")
     public String updateCustomer(@RequestBody CustomerUpdateDto customerUpdateDto){
-        customerService.updateCustomer(customerUpdateDto);
-        return null;
+        String message = customerService.updateCustomer(customerUpdateDto);
+        return message;
     }
 }
