@@ -28,8 +28,5 @@ public class CustomerServiceIMPL implements CustomerService {
         return "saved";
     }
 
-    @Override
-    public void updateCustomer(CustomerUpdateDto customerUpdateDto) {
-        
-    }
+
 }

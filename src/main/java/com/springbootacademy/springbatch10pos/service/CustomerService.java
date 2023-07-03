@@ -6,5 +6,4 @@ import com.springbootacademy.springbatch10pos.dto.request.CustomerUpdateDto;
 public interface CustomerService { //abstraction
     public String saveCustomer(CustomerDTO customerDTO);
 
-    void updateCustomer(CustomerUpdateDto customerUpdateDto);
 }
