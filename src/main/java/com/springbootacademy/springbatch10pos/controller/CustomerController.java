@@ -26,7 +26,7 @@ public class CustomerController {
     }
 
     @PutMapping("/update")
-    public String updateCustomer(@RequestBody CustomerDTO customerDTO){
+    public String updateCustomer(@RequestBody CustomerUpdateDto customerUpdateDto){
 
     }
 }
