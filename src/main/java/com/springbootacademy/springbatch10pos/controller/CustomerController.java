@@ -1,6 +1,7 @@
 package com.springbootacademy.springbatch10pos.controller;
 
 import com.springbootacademy.springbatch10pos.dto.CustomerDTO;
+import com.springbootacademy.springbatch10pos.dto.request.CustomerUpdateDto;
 import com.springbootacademy.springbatch10pos.service.CustomerService;
 import com.springbootacademy.springbatch10pos.service.impl.CustomerServiceIMPL;
 import com.sun.org.apache.xpath.internal.objects.XString;
@@ -27,6 +28,7 @@ public class CustomerController {
 
     @PutMapping("/update")
     public String updateCustomer(@RequestBody CustomerUpdateDto customerUpdateDto){
-
+        customerService.updateCustomer(customerUpdateDto);
+        return"updated";
     }
 }

@@ -1,6 +1,7 @@
 package com.springbootacademy.springbatch10pos.service.impl;
 
 import com.springbootacademy.springbatch10pos.dto.CustomerDTO;
+import com.springbootacademy.springbatch10pos.dto.request.CustomerUpdateDto;
 import com.springbootacademy.springbatch10pos.entity.Customer;
 import com.springbootacademy.springbatch10pos.repo.CustomerRepo;
 import com.springbootacademy.springbatch10pos.service.CustomerService;
@@ -25,5 +26,10 @@ public class CustomerServiceIMPL implements CustomerService {
         );
         customerRepo.save(customer);//Save object to database
         return "saved";
+    }
+
+    @Override
+    public void updateCustomer(CustomerUpdateDto customerUpdateDto) {
+        
     }
 }
