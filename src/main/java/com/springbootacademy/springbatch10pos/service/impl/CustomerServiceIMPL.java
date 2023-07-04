@@ -27,16 +27,15 @@ public class CustomerServiceIMPL implements CustomerService {
         customerRepo.save(customer);//Save object to database
         return "saved";
     }
-   // select * from customer where customerID.getCustomerId();
 
     @Override
     public String updateCustomer(CustomerUpdateDto customerUpdateDto) {
        if(customerRepo.existsById(customerUpdateDto.getCustomerId())){
-
+           System.out.println("found data");
        }else{
-           
+          throw new RuntimeException("NO data found in that id");
        }
-        return "pramitha";
+       return "Saman";
     }
 
 
