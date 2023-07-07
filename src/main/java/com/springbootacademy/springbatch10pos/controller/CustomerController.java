@@ -6,7 +6,7 @@ import com.springbootacademy.springbatch10pos.service.CustomerService;
 /*import com.springbootacademy.springbatch10pos.service.impl.CustomerServiceIMPL;
 import com.sun.org.apache.xpath.internal.objects.XString;
 import com.sun.org.apache.xpath.internal.objects.XStringForChars;*/
-import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotationl.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
